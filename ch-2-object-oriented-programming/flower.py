@@ -16,19 +16,19 @@ class Flower:
 
     def set_name(self, name):
         if not name:
-            print("Invalid name, must be a non-empty string")
+            raise ValueError("Invalid name, must be a non-empty string")
         else:
             self.name = name
 
     def set_petals(self, petals: int):
         if not petals or not isinstance(petals, int):
-            print("Invalid number, must be an integer")
+            raise ValueError("Invalid number, must be an integer")
         else:
             self.petals = petals
 
     def set_price(self, price):
         if not price:
-            print("Invalid price, must be a number (without currency sign)")
+            raise ValueError("Invalid price, must be a number (without currency sign)")
         else:
             self.price = price
 
